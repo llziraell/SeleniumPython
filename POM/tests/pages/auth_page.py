@@ -18,10 +18,10 @@ class AuthPage:
         self.driver.find_element(*self.authOpenBtn).click()
         time.sleep(1)
 
-        self.driver.find_element(*self.inputEmail).send_keys('email@qqq')
+        self.driver.find_element(*self.inputEmail).send_keys('sasha__.sasha@sasha.com')
         time.sleep(1)
 
-        self.driver.find_element(*self.inputPass).send_keys('12345678')
+        self.driver.find_element(*self.inputPass).send_keys('sashasasha0')
         time.sleep(1)
 
         self.driver.find_element(*self.signInBtn).click()
