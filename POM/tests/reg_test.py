@@ -1,22 +1,6 @@
-import pytest
 import time
-
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
-
 from POM.tests.pages.reg_page import RegPage
 
-@pytest.fixture()
-def driver():
-    options = Options()
-    options.add_argument("--incognito")
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
-    driver.implicitly_wait(10)
-    yield driver
-    driver.close()
-    driver.quit()
 
 # @pytest.mark.parametrize("fullName, email, phone, password", [
 #     ("Sasha Sasha0", "sasha0.sasha@sasha.com", "89787471374", "sashasasha0"),
